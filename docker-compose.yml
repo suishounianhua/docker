@@ -27,15 +27,13 @@ services:
         container_name: web
         image: nginx:alpine
         volumes:
-            - "./etc/nginx/default.conf:/etc/nginx/conf.d/default.conf"
-            - "./etc/ssl:/etc/ssl"
-            - "./web:/var/www/html"
-            - "./etc/nginx/default.template.conf:/etc/nginx/conf.d/default.template"
+            - "/home/docker/nginx/default.conf:/etc/nginx/conf.d/default.conf"
+            - "/home/docker/nginx/ssl:/etc/ssl"
+            - "/home/docker/nginx/web:/var/www/html"
+            - "/home/docker/nginx/default.template.conf:/etc/nginx/conf.d/default.template"
         ports:
             - "9999:80"
             - "9991:443"
-        environment:
-            - NGINX_HOST=${NGINX_HOST}
         command: /bin/sh -c "envsubst '$$NGINX_HOST' < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
         restart: always
 
