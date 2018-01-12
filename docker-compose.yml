@@ -35,7 +35,7 @@ services:
             - "9999:80"
             - "9991:443"
         #command: /bin/sh -c "envsubst '$$NGINX_HOST' < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
-        restart: always
+        #restart: always
 
     #架阿里云内网  registry-internal.cn-hangzhou.aliyuncs.com/peterpang/web
     peter:
