@@ -1,4 +1,9 @@
-FROM nginx:latest
-RUN rm -rf /etc/nginx
-COPY ./conf /etc/nginx
-EXPOSE 80 443
+FROM nginx
+
+COPY content /usr/share/nginx/html
+
+COPY conf /etc/nginx
+
+VOLUME /home/usr/share/nginx/html
+
+VOLUME /home/etc/nginx
