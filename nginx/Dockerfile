@@ -8,7 +8,11 @@ RUN apt-get install nginx -y
 
 # Expose port 80
 EXPOSE 80
- 
+
+USER www-data
+
+VOLUME /home/docker/web
+
 WORKDIR /home/web
 #
 # Last is the actual command to start up NGINX within our Container

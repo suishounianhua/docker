@@ -29,7 +29,7 @@ services:
         restart: always
         network_mode: "bridge"
         volumes:
-            - /var/www/html/web:/home/web
+            - /home/docker/web:/home/web
         ports:
             - "9999:80"
 
