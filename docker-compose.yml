@@ -31,10 +31,10 @@ services:
         ports:
             - "9999:80"       
 
-    # SD框架阿里云内网 registry.cn-hangzhou.aliyuncs.com/peterpang/dev
+    #架阿里云内网  registry-internal.cn-hangzhou.aliyuncs.com/peterpang/web
     peter:
         container_name: peter
-        image: registry-internal.cn-hangzhou.aliyuncs.com/peterpang/dev
+        image:  registry-internal.cn-hangzhou.aliyuncs.com/peterpang/web
         links:
             - mysql
             - redis
@@ -49,7 +49,7 @@ services:
 
     ljj:
         container_name: ljj
-        image: registry-internal.cn-hangzhou.aliyuncs.com/peterpang/dev
+        image:  registry-internal.cn-hangzhou.aliyuncs.com/peterpang/web
         links:
             - mysql
             - redis
@@ -64,7 +64,7 @@ services:
 
     hy:
             container_name: hy
-            image: registry-internal.cn-hangzhou.aliyuncs.com/peterpang/dev
+            image:  registry-internal.cn-hangzhou.aliyuncs.com/peterpang/web
             links:
                 - mysql
                 - redis
@@ -79,7 +79,7 @@ services:
                 
     jm:
             container_name: jm
-            image: registry-internal.cn-hangzhou.aliyuncs.com/peterpang/dev
+            image:  registry-internal.cn-hangzhou.aliyuncs.com/peterpang/web
             links:
                 - mysql
                 - redis
@@ -93,7 +93,7 @@ services:
                 - "10422:22"
     joseph:
             container_name: joseph
-            image: registry-internal.cn-hangzhou.aliyuncs.com/peterpang/dev
+            image:  registry-internal.cn-hangzhou.aliyuncs.com/peterpang/web
             links:
                 - mysql
                 - redis
