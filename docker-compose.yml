@@ -25,7 +25,7 @@ services:
     # Nginx 1.13.: https://hub.docker.com/_/nginx/
     web:
         container_name: web
-        image: nginx:alpine
+        image: nginx:latest
         volumes:
             -  /home/docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
             -  /home/docker/nginx/web:/var/www/html
