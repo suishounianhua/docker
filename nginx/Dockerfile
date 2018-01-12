@@ -6,7 +6,7 @@
 
 # Pull base image.
 FROM dockerfile/ubuntu
-
+MAINTAINER peterpang 10846295@qq.com
 # Install Nginx.
 RUN \
   add-apt-repository -y ppa:nginx/stable && \
