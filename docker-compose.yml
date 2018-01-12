@@ -29,11 +29,9 @@ services:
         restart: always
         network_mode: "bridge"
         volumes:
-            - ./var/www/html/:/home/www/
+            - /var/www/html/web:/home/web
         ports:
             - "9999:80"
-        build:
-            context: .
 
     #架阿里云内网  registry-internal.cn-hangzhou.aliyuncs.com/peterpang/web
     peter:
