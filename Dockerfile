@@ -39,6 +39,7 @@ RUN apt-get update && apt-get install -y \
 	&& php -r"copy('https://getcomposer.org/installer','composer-setup.php');" \
 	&& php composer-setup.php --install-dir=/usr/bin --filename=composer \
 	&& rm -rf /home/temp \
+	&& mkdir -p /home/var/www/html  \
 	&& cd /usr/local/etc/php/conf.d/ \
 	&& echo extension=igbinary.so>igbinary.ini \
 	&& echo extension=redis.so>redis.ini \
