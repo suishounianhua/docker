@@ -25,7 +25,7 @@ services:
     # Nginx 1.13.: https://hub.docker.com/_/nginx/
     web:
         container_name: web
-        image: nginx:latest
+        image: registry-internal.cn-hangzhou.aliyuncs.com/peterpang/nginx
         restart: always
         network_mode: "bridge"
         volumes:
