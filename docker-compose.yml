@@ -22,17 +22,6 @@ services:
             - /home/docker/redis:/data
         ports:
             - "16379:6379"
-    # Nginx 1.13.: https://hub.docker.com/_/nginx/
-    web:
-        container_name: web
-        image: registry-internal.cn-hangzhou.aliyuncs.com/peterpang/nginx
-        restart: always
-        network_mode: "bridge"
-        volumes:
-            - /home/docker/web:/home/web
-        ports:
-            - "9999:80"
-
     #架阿里云内网  registry-internal.cn-hangzhou.aliyuncs.com/peterpang/web
     peter:
         container_name: peter
@@ -40,7 +29,6 @@ services:
         links:
             - mysql
             - redis
-            - web
         volumes:
             - /home/docker_user/peter:/home
         ports: 
@@ -55,7 +43,6 @@ services:
         links:
             - mysql
             - redis
-            - web
         volumes:
             - /home/docker_user/ljj:/home
         ports:
@@ -70,7 +57,6 @@ services:
             links:
                 - mysql
                 - redis
-                - web
             volumes:
                 - /home/docker_user/hy:/home
             ports:
@@ -85,7 +71,6 @@ services:
             links:
                 - mysql
                 - redis
-                - web
             volumes:
                 - /home/docker_user/jm:/home
             ports:
@@ -99,7 +84,6 @@ services:
             links:
                 - mysql
                 - redis
-                - web
             volumes:
                 - /home/docker_user/joseph:/home
             ports:
