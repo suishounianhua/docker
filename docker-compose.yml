@@ -1,4 +1,4 @@
-version: "3"
+version: "2"
 services:
     # MySQL 5.7: https://hub.docker.com/_/mysql/
     mysql:
